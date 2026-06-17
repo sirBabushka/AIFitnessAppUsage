@@ -11,7 +11,7 @@
         </property>
 
         <property name="hibernate.connection.url">
-            jdbc:sqlserver://185.119.119.126:1433;databaseName=DanubeDevs;encrypt=true;trustServerCertificate=true
+            jdbc:sqlserver://185.119.119.126:1433;databaseName=wozniakdb;encrypt=true;trustServerCertificate=true
         </property>
 
         <property name="hibernate.connection.username">wozniak</property>
@@ -35,10 +35,6 @@
         <!--  ============================================================  -->
         <property name="hibernate.hbm2ddl.auto">none</property>
 
-        <property name="hibernate.current_session_context_class">thread</property>
-
-        <!--  Entity-Klassen werden im Code registriert (HibernateUtil.java),
-                     daher keine <mapping>-Eintraege noetig.  -->
 
 
     </session-factory>
