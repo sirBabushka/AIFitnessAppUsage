@@ -5,6 +5,8 @@ import javax.swing.*;
 /**
  * Einstiegspunkt der Anwendung.
  *
+ * INFO: bitte Compiler auf 25 geben!! es hat bei uns funktoniert
+ *
  * Startet das Hauptfenster, das beim Laden die Daten aus der Datenbank
  * holt, ein Diagramm anzeigt und die beiden Export-Buttons bereitstellt.
  */
