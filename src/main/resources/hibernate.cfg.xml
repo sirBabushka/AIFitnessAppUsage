@@ -11,6 +11,7 @@
         </property>
 
         <property name="hibernate.connection.url">
+            jdbc:sqlserver://185.119.119.126:1433;databaseName=DanubeDevs;encrypt=true;trustServerCertificate=true
         </property>
 
         <property name="hibernate.connection.username">wozniak</property>
