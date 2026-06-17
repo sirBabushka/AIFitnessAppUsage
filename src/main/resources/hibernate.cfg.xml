@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="hibernate.connection.driver_class">
+            com.microsoft.sqlserver.jdbc.SQLServerDriver
+        </property>
+
+        <property name="hibernate.connection.url">
+            jdbc:sqlserver://185.119.119.126:1433;databaseName=DanubeDevs;encrypt=true;trustServerCertificate=true
+        </property>
+
+        <property name="hibernate.connection.username">wozniak</property>
+        <property name="hibernate.connection.password">wozniak</property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <!--  ============================================================  -->
+        <!--   WICHTIG: Schema-Verwaltung                                   -->
+        <!--                                                                -->
+        <!--   "none"  = Hibernate fasst die Tabellen NICHT an.             -->
+        <!--             Bestehende Daten bleiben erhalten.                 -->
+        <!--                                                                -->
+        <!--   NIEMALS "create" oder "create-drop" verwenden -             -->
+        <!--   diese loeschen beim Start ALLE Daten und legen die          -->
+        <!--   Tabellen leer neu an!                                       -->
+        <!--                                                                -->
+        <!--   Das Schema kommt aus database.sql, nicht von Hibernate.     -->
+        <!--  ============================================================  -->
+        <property name="hibernate.hbm2ddl.auto">none</property>
+
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <!--  Entity-Klassen werden im Code registriert (HibernateUtil.java),
+                     daher keine <mapping>-Eintraege noetig.  -->
+
+
+    </session-factory>
+</hibernate-configuration>
